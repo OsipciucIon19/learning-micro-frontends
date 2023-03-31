@@ -14,6 +14,7 @@ const MarketingApp = () => {
   useEffect(() => {
     fetchComponent()
       .then(callback => {
+        console.log(callback)
         callback.mount(ref.current)
       })
       .catch(e => {
