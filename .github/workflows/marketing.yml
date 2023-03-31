@@ -16,11 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run:
-          name: Install aws cli
-          command: |
-            sudo apt-get update
-            sudo apt-get -y -qq install awscli
+      - name: Install aws cli
+        command: |
+          sudo apt-get update
+          sudo apt-get -y -qq install awscli
+
       - uses: actions/checkout@v2
       - run: npm install
       - run: npm run build
