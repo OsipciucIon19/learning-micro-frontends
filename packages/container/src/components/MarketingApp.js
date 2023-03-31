@@ -1,6 +1,6 @@
 import React from 'react'
 import {useEffect, useRef} from "react";
-const { mount } = await import('marketing/MarketingApp')
+const { mount } = import('marketing/MarketingApp')
 const MarketingApp = () => {
   const ref = useRef(null)
 
