@@ -4,7 +4,8 @@ const firstLoad = new Promise(resolve => setTimeout(resolve, 10000));
 
 async function fetchComponent() {
   await firstLoad
-
+  console.log(await import('marketing/MarketingApp'))
+  console.log(await import('marketing/test'))
   return (await import('marketing/MarketingApp'))
 }
 
