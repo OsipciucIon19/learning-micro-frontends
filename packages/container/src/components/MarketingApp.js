@@ -1,18 +1,16 @@
-// import { mount } from 'marketing/MarketingApp'
+import {mount} from 'marketing/MarketingApp'
 import React, {useEffect, useRef} from 'react'
-import('marketing/MarketingApp').then(({mount}) => {
-  const MarketingApp = () => {
-    const ref = useRef(null)
 
-    useEffect(() => {
-      mount(ref.current)
-    }, [])
+const MarketingApp = () => {
+  const ref = useRef(null)
 
-    return (
-      <div ref={ref} />
-    )
-  }
+  useEffect(() => {
+    mount(ref.current)
+  }, [])
 
-  export default MarketingApp
+  return (
+    <div ref={ref}/>
+  )
+}
 
-});
+export default MarketingApp
