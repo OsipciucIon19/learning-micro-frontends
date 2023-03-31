@@ -20,5 +20,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html'
     })
-  ]
+  ],
+  experiments: {
+    topLevelAwait: true
+  }
 }
