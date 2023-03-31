@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 
-const firstLoad = new Promise(resolve => setTimeout(resolve, 1000));
+const firstLoad = new Promise(resolve => setTimeout(resolve, 10000));
 
 async function fetchComponent() {
   await firstLoad
