@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run:
+          name: Install aws cli
+          command: |
+            sudo apt-get update
+            sudo apt-get -y -qq install awscli
       - uses: actions/checkout@v2
       - run: npm install
       - run: npm run build
@@ -27,7 +32,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: eu-north-1
 
-      - run: aws cloudfront create-invalidation --invalidation-batch file://inv-batch-marketing.json --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }}
+      - run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/marketing/latest/remoteEntry.js"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
