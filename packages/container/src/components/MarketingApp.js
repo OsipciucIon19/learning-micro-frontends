@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {lazy} from 'react'
 import {useEffect, useRef} from "react";
 const mount = lazy(() => import('marketing/MarketingApp'))
 const MarketingApp = () => {
