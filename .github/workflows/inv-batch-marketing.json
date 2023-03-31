@@ -1,0 +1,7 @@
+{
+  "Paths": {
+    "Quantity": 1,
+    "Items": ["/marketing/latest/remoteEntry.js"]
+  },
+  "CallerReference": "cli-example"
+}
