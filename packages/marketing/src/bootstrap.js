@@ -14,4 +14,4 @@ if (process.env.NODE_ENV === 'development') {
   }
 }
 
-export { App }
+export { mount }
