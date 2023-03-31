@@ -17,8 +17,8 @@ jobs:
 
     steps:
       - run: |
-          sudo apt-get update
-          sudo apt-get -y -qq install awscli
+          apt-get update
+          apt-get -y -qq install awscli
 
       - uses: actions/checkout@v2
       - run: npm install
