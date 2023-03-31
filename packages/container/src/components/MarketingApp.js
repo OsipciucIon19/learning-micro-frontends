@@ -17,7 +17,7 @@ const MarketingApp = () => {
         callback.mount(ref.current)
       })
       .catch(e => {
-        console.log(e)
+        console.log(typeof e)
       });
   }, [])
 
