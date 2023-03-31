@@ -23,5 +23,8 @@ module.exports = {
   ],
   experiments: {
     topLevelAwait: true
-  }
+  },
+  optimization: {
+    splitChunks: false,
+  },
 }
